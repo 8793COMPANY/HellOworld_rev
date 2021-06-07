@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditText_Style" parent="TextAppearance.AppCompat">
+        <item name="android:textCursorDrawable">@drawable/cursourcolor</item>
+        <item name="android:textSelectHandle">@drawable/select_handle</item>
+        <item name="android:textSelectHandleLeft">@drawable/select_handle</item>
+        <item name="android:textSelectHandleRight">@drawable/select_handle</item>
+        <item name="android:fontFamily">@font/nanum_square_r</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:lineSpacingExtra">3.5sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView_Style" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/nanum_square_r</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#070707</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:lineSpacingExtra">3.5sp</item>
+    </style>
+</resources>

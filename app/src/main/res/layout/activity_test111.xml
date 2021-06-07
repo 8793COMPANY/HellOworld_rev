@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Join_input"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="640"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:background="@drawable/join_input_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="594"
+            android:layout_marginRight="2dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24.1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22.5dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="20.5sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="9sp"
+                        android:text="010-1234-5678"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25.9dp"/>
+
+                <!-- Input 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:paddingLeft="10.5dp"
+                        android:text="사용자 이름"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_name"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="302.7"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:gravity="center"
+
+
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:hint="사용자 이름 입력" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 1 END * -->
+
+                <!-- Input 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:paddingLeft="10.5dp"
+                        android:text="성별"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <Button
+                        android:id="@+id/join_input_gender_m"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="147.1"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#a7a7a7"
+                        android:text="남"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:gravity="center"
+                        android:forceDarkAllowed="false"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10.1" />
+
+                    <Button
+                        android:id="@+id/join_input_gender_f"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="147.1"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#a7a7a7"
+                        android:text="여"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:gravity="center"
+                        android:forceDarkAllowed="false"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 2 END * -->
+
+                <!-- Input 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:paddingLeft="10.5dp"
+                        android:text="생년월일"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <LinearLayout
+                        android:id="@+id/join_input_ymd_layout"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/join_input_ymd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/nanum_square_r"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="#FFF"
+                            android:letterSpacing="0.08"
+                            android:lineSpacingExtra="3.5sp"
+                            android:gravity="center"
+                            android:hint="생년월일"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 3 END * -->
+
+                <!-- Input 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+                        android:paddingLeft="10.5dp"
+                        android:text="거주지역"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="10.3dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <LinearLayout
+                        android:id="@+id/join_input_area_layout"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:theme="@style/spinnerTheme"
+                            android:id="@+id/join_input_area_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:paddingLeft="40dp"
+                            android:spinnerMode="dialog"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_area_detail"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        android:textColor="#000"
+                        android:hint="상세주소"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="3.5sp"
+
+
+                        android:gravity="center"
+                        android:imeOptions="actionDone"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Btn_Style" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/nanum_square_r</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#a7a7a7</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:lineSpacingExtra">3.5sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

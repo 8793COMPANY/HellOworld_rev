@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Join_input"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="640"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:background="@drawable/join_input_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="594"
+            android:layout_marginRight="2dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24.1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="22.5dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_square_r"
+                        android:textStyle="bold"
+                        android:textSize="20.5sp"
+                        android:textColor="#070707"
+                        android:letterSpacing="0.08"
+                        android:lineSpacingExtra="9sp"
+                        android:text="010-1234-5678"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25.9dp"/>
+
+                <!-- Input 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="사용자 이름"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_name"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="302.7"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        style="@style/EditText_Style"
+                        android:hint="사용자 이름 입력"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 1 END * -->
+
+                <!-- Input 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="성별"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <Button
+                        android:id="@+id/join_input_gender_m"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="147.1"
+                        style="@style/Btn_Style"
+                        android:text="남"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10.1" />
+
+                    <Button
+                        android:id="@+id/join_input_gender_f"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="147.1"
+                        style="@style/Btn_Style"
+                        android:text="여"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 2 END * -->
+
+                <!-- Input 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="생년월일"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <LinearLayout
+                        android:id="@+id/join_input_ymd_layout"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/join_input_ymd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/EditText_Style"
+                            android:hint="생년월일"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="19.7dp"/>
+                <!-- Input 3 END * -->
+
+                <!-- Input 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="거주지역"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="10.3dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <LinearLayout
+                        android:id="@+id/join_input_area_layout"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:theme="@style/spinnerTheme"
+                            android:id="@+id/join_input_area_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:paddingLeft="40dp"
+                            android:spinnerMode="dialog"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_area_detail"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"
+                        android:hint="상세주소"
+                        android:imeOptions="actionDone"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView_Style"
+                    android:text="* 응급상황 발생시 출동할 주소 등록"
+                    android:layout_marginTop="7.1dp"
+                    android:layout_marginLeft="49.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="29.7dp"/>
+                <!-- Input 4 END * -->
+
+                <!-- Input 5 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="병력기록 (직접입력)"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_disease_1"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"
+                        android:hint="예: 당뇨"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginTop="6.3dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_disease_2"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"
+                        android:hint="예: 고혈압"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginTop="6.3dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_disease_3"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"
+                        android:hint="예: 장애"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginTop="6.3dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/join_input_disease_4"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"
+                        android:hint="예: 거동불편"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView_Style"
+                    android:text="* 응급상황 출동시 참고 자료 제공"
+                    android:layout_marginTop="7.1dp"
+                    android:layout_marginLeft="49.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="29.7dp"/>
+                <!-- Input 5 END * -->
+
+                <!-- Input 6 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="보호자 연락처 (최대 3인)"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.7" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_1_type"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="118.7"
+                        style="@style/EditText_Style"
+                        android:hint="예)자녀"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10.1" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_1_tel"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="173.8"
+                        style="@style/EditText_Style"
+                        android:hint="휴대폰 연락처"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="27.7" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginTop="9.7dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.7" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_2_type"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="118.7"
+                        style="@style/EditText_Style"
+                        android:hint="예)보호자"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10.1" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_2_tel"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="173.8"
+                        style="@style/EditText_Style"
+                        android:hint="휴대폰 연락처"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="27.7" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:layout_marginTop="9.7dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.7" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_3_type"
+                        android:background="@drawable/join_input_int_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="118.7"
+                        style="@style/EditText_Style"
+                        android:hint="예)보호자"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10.1" />
+
+                    <EditText
+                        android:id="@+id/join_input_nok_3_tel"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="173.8"
+                        style="@style/EditText_Style"
+                        android:hint="휴대폰 연락처"
+                        android:cursorVisible="true"
+                        android:inputType="phone"
+                        android:maxLength="11"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="27.7" />
+                </LinearLayout>
+
+
+                <!-- 관리자코드 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="29.7dp"/>
+
+                <!-- Input : 관리자코드 -->
+                <LinearLayout
+                    android:id="@+id/show_admin_layout_1"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:weightSum="360"
+                    android:layout_marginBottom="11dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <ImageView
+                        android:layout_width="9.3dp"
+                        android:layout_height="9.3dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/join_input_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextView_Style"
+                        android:paddingLeft="10.5dp"
+                        android:text="관리자 코드"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/show_admin_layout_2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+
+                    <EditText
+                        android:id="@+id/admin_code_edit"
+                        android:background="@drawable/join_input_double_off"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="302.6"
+                        style="@style/EditText_Style"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="62.7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <!-- Input 6 END * -->
+
+                <!-- Input 7 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="31.4" />
+
+                    <ImageButton
+                        android:id="@+id/join_input_upload_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="299"
+                        android:background="@drawable/join_input_upload_btn_2"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.6" />
+                </LinearLayout>
+
+                <!-- edit admin_code -->
+
+
+                <LinearLayout
+                    android:id="@+id/show_back_btn"
+                    android:visibility="gone"
+                    android:layout_marginTop="9.7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44.7dp"
+                    android:weightSum="360"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="31.4" />
+
+                    <ImageButton
+                        android:id="@+id/join_input_back_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="299"
+                        android:background="@drawable/join_input_back_btn"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="29.6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51.2dp"/>
+                <!-- Input 7 END * -->
+
+            <!-- ScrollView - LinearLayout | END * -->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Log_data"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="640"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="46"
+            android:orientation="horizontal"
+            android:weightSum="360"
+            android:gravity="end"
+            android:background="@drawable/log_data_title_back_2">
+
+            <Button
+                android:id="@+id/log_data_close"
+                android:layout_width="0dp"
+                android:layout_height="24.5dp"
+                android:layout_weight="24.5"
+                android:layout_marginRight="15.5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/log_data_close"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:weightSum="360"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="15"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="338.6"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nanum_square_r"
+                    android:textStyle="bold"
+                    android:textSize="12.5sp"
+                    android:textColor="#070707"
+                    android:lineSpacingExtra="4sp"
+                    android:text="데이터 정보\n첫 사용/마지막 사용/열람수/통화수/OS버전/앱버전/걸음수"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:weightSum="360"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="15"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/current_log"
+                    android:layout_width="0dp"
+                    android:layout_weight="338.6"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nanum_square_r"
+                    android:textStyle="bold"
+                    android:textSize="12.5sp"
+                    android:textColor="#070707"
+                    android:lineSpacingExtra="4sp"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="594">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/main_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

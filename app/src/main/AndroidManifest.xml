@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.corporation.helloworld">
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:name="com.corporation.helloworld.Share.Application"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="안녕하세요"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HellOworld"
+        android:requestLegacyExternalStorage="true"
+        >
+
+
+
+        <activity android:name="com.corporation.helloworld.datePicker" />
+        <activity android:name="com.corporation.helloworld.Log_data" />
+        <activity android:name="com.corporation.helloworld.Join_logOn" />
+        <activity
+            android:name="com.corporation.helloworld.Join_edit"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.corporation.helloworld.Admin_code" />
+        <activity
+            android:name="com.corporation.helloworld.Join_input"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.corporation.helloworld.Join" />
+        <activity android:name="com.corporation.helloworld.Alert_agree_5" />
+        <activity android:name="com.corporation.helloworld.Alert_agree_4" />
+        <activity android:name="com.corporation.helloworld.Alert_agree_3" />
+        <activity android:name="com.corporation.helloworld.Alert_agree_2" />
+        <activity android:name="com.corporation.helloworld.Alert_agree_1" />
+        <activity android:name="com.corporation.helloworld.Alert_perm" />
+        <activity android:name="com.corporation.helloworld.Alert_cell" />
+        <activity
+            android:name="com.corporation.helloworld.MainActivity"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.OneDay_Alarm"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.OneDay6_Alarm"
+            android:exported="false" />
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.NoonDay_Alarm"
+            android:exported="false" />
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.NoonDay6_Alarm"
+            android:exported="false" />
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.BatteryCheckReceiver"
+            android:exported="false" />
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.SmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="5822">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <!--
+                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+                <data android:mimeType="application/vnd.wap.mms-message" />
+                -->
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.corporation.helloworld.Receiver.RebootReceiver"
+            android:directBootAware="true"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.corporation.helloworld.Receiver.PowerConnectionReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="battery_call" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.corporation.helloworld.Service.CheckService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="hello_service_mambo" />
+            </intent-filter>
+        </service>
+        <service android:name="com.android.mms.transaction.TransactionService" />
+    </application>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SEND_MMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACTION_LOCKED_BOOT_COMPLETED " />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- smsmms -->
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>
