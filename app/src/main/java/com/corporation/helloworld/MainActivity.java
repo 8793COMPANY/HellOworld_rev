@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(getApplicationContext(), Alert_perm.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 2000);
-    }
+            startActivity(intent);
+            finish();
+        }
+    }, 2000);
+}
 
     private void startLoading2() {
         Handler handler = new Handler();

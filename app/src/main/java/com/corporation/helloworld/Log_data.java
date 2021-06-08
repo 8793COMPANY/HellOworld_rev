@@ -103,6 +103,6 @@ public class Log_data extends AppCompatActivity {
         first_call = (cursor.getString(1)+"/"+cursor.getString(2));
         open_screen = (cursor.getString(3));
         activitycounter = (CheckService.mStepDetector+"");
-        current_log.setText("현재 데이터\r\n" + first_call + "/" + open_screen + "/" + calling_phone + "/" + os_version + "/" + app_version + "/" + activitycounter);
+     //   current_log.setText("현재 데이터\r\n" + first_call + "/" + open_screen + "/" + calling_phone + "/" + os_version + "/" + app_version + "/" + activitycounter);
     }
 }

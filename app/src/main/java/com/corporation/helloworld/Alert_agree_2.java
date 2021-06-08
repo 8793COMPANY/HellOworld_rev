@@ -24,6 +24,7 @@ public class Alert_agree_2 extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Alert_agree_3.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            finish();
         });
 
         Alert_agree_no.setOnClickListener(v -> {

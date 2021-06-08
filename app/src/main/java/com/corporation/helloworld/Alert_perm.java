@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -43,6 +45,11 @@ public class Alert_perm extends AppCompatActivity {
         setContentView(R.layout.activity_alert_perm);
 
         ImageButton alert_perm_btn = findViewById(R.id.alert_perm_btn);
+        alert_perm_btn.setOnClickListener(v -> {
+            // 권한 요청 및 체크
+            checkRequestPermission();
+        });
+
 
         if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             PowerManager pm = (PowerManager) getApplicationContext().getSystemService(POWER_SERVICE);
@@ -59,11 +66,6 @@ public class Alert_perm extends AppCompatActivity {
             }
         }
 
-
-        alert_perm_btn.setOnClickListener(v -> {
-            // 권한 요청 및 체크
-            checkRequestPermission();
-        });
     }
 
 
@@ -86,8 +88,11 @@ public class Alert_perm extends AppCompatActivity {
                 ||   ContextCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(this,WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
         ){
+
+
             requestPermission();
         }else {
+
             permit_after_Setting();
         }
 
@@ -140,6 +145,7 @@ public class Alert_perm extends AppCompatActivity {
                 //Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                finish();
             }
         }
     }

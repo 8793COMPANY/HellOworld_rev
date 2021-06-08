@@ -34,6 +34,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -42,29 +43,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="14dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:weightSum="360"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="15"
-                    android:layout_height="match_parent"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="338.6"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/nanum_square_r"
-                    android:textStyle="bold"
-                    android:textSize="12.5sp"
-                    android:textColor="#070707"
-                    android:lineSpacingExtra="4sp"
-                    android:text="데이터 정보\n첫 사용/마지막 사용/열람수/통화수/OS버전/앱버전/걸음수"/>
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,6 +59,7 @@
                 android:layout_height="14dp"/>
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:weightSum="360"
@@ -101,6 +80,7 @@
                     android:textSize="12.5sp"
                     android:textColor="#070707"
                     android:lineSpacingExtra="4sp"
+                    android:visibility="gone"
                     android:text=""/>
 
             </LinearLayout>
