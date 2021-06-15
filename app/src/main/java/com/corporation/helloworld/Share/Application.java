@@ -175,7 +175,7 @@ public class Application extends android.app.Application {
     }
 
 
-    //하루에 한번씩 보내는 전송 저녘
+    //하루에 한번씩 보내는 전송 저녘 23:50
     public void setAlarm( )
     {
         Log.e("등록","등록");
@@ -215,7 +215,7 @@ public class Application extends android.app.Application {
 
 
 
-    //하루에 한번씩 보내는 전송 오후
+    //하루에 한번씩 보내는 전송 오후 5:50
     public void setAlarm_Noon( )
     {
 
@@ -246,7 +246,7 @@ public class Application extends android.app.Application {
         }
     }
 
-    //하루에 한번씩 보내는 전송 오후
+    //하루에 한번씩 보내는 전송 오후 11:50
     public void setAlarm_Noon_test1( )
     {
 
@@ -278,7 +278,7 @@ public class Application extends android.app.Application {
     }
 
 
-    //하루에 한번씩 보내는 전송 오후
+    //하루에 한번씩 보내는 전송 오후 17:50
     public void setAlarm_Noon_test2( )
     {
 
