@@ -105,10 +105,11 @@
                     android:layout_weight="116.2" />
 
                 <ImageView
+                    android:id="@+id/join_call_me_2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="131"
-                    android:background="@drawable/join_call_me" />
+                    android:background="@drawable/join_call_me_2" />
 
                 <LinearLayout
                     android:layout_width="0dp"
