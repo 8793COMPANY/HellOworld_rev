@@ -21,10 +21,14 @@ public class Alert_agree_3 extends AppCompatActivity {
         final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         Alert_agree_yes.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), Alert_agree_4.class);
+            Intent intent = new Intent(getApplicationContext(), Join.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             finish();
+//            Intent intent = new Intent(getApplicationContext(), Alert_agree_4.class);
+//            startActivity(intent);
+//            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+//            finish();
         });
 
         Alert_agree_no.setOnClickListener(v -> {
