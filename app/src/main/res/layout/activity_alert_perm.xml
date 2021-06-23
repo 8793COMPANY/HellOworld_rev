@@ -21,7 +21,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="444">
+            android:layout_weight="462.5">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -38,7 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="299"
-                    android:background="@drawable/alert_perm_window_5" />
+                    android:background="@drawable/alert_perm_window_6" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -51,7 +51,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="50" />
+            android:layout_weight="31.5" />
 
         <LinearLayout
             android:layout_width="match_parent"

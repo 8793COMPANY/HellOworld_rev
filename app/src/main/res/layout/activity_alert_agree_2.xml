@@ -40,7 +40,7 @@
                     android:layout_weight="299"
                     android:weightSum="462.5"
                     android:orientation="vertical"
-                    android:background="@drawable/agree_2_window" >
+                    android:background="@drawable/agree_2_window_2" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
