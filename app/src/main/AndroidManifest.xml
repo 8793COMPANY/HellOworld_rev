@@ -92,6 +92,11 @@
                 <action android:name="battery_call" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".Receiver.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
         <service
             android:name="com.corporation.helloworld.Service.CheckService"
             android:enabled="true"

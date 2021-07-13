@@ -237,7 +237,11 @@ public class Join_input extends AppCompatActivity {
                 }else{
                   if (i==3){
                       first_Msg += data_items[i]+"_";
-                  }else{
+                  }else if (i==4){
+                      // 21-07-13 개선사항 요청
+                      // 첫번째 메시지 - 마지막 슬래쉬 문자 제거
+                      first_Msg += data_items[i];
+                  } else {
                       first_Msg += data_items[i]+"/";
                   }
                 }
@@ -255,6 +259,8 @@ public class Join_input extends AppCompatActivity {
                 }
 
                 if (i == disease.length-1){
+                    // 21-07-13 개선사항 요청
+                    // 마지막 메시지 - 마지막 슬래쉬 문자 제거
                     second_Msg = second_Msg.substring(0, second_Msg.length()-1);
                 }
 
