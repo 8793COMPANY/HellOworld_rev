@@ -1,5 +1,7 @@
 package com.corporation.helloworld.Service;
 
+import static com.squareup.seismic.ShakeDetector.SENSITIVITY_LIGHT;
+
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -14,6 +16,7 @@ import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+import android.hardware.SensorListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.IBinder;
@@ -33,8 +36,9 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.corporation.helloworld.Share.Application;
+import com.squareup.seismic.ShakeDetector;
 
-public class CheckService extends Service implements SensorEventListener, BatteryResultCallback {
+public class CheckService extends Service implements SensorEventListener, BatteryResultCallback, ShakeDetector.Listener {
 
     public static Intent serviceIntent;
     public static int mStepDetector;
@@ -99,6 +103,9 @@ public class CheckService extends Service implements SensorEventListener, Batter
         scrOnFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         screenOnReceiver = new ScreenOnReceiver();
         registerReceiver(screenOnReceiver, scrOnFilter);
+
+        // TODO : 회원 등록 후 이 부분에서 권한 문제로 에러 발생
+        // 주석 처리 하면 정상 작동
         application.setLogSetting();
 
 
@@ -203,8 +210,16 @@ public class CheckService extends Service implements SensorEventListener, Batter
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         stepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
         if (stepDetectorSensor == null) {
+            // 대체 만보기 가동
+            ShakeDetector sd = new ShakeDetector(this);
+            sd.setSensitivity(SENSITIVITY_LIGHT);
+            sd.start(sensorManager);
         } else {
-            sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            //sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            // 대체 만보기 가동
+            ShakeDetector sd = new ShakeDetector(this);
+            sd.setSensitivity(SENSITIVITY_LIGHT);
+            sd.start(sensorManager);
         }
     }
 
@@ -273,5 +288,13 @@ public class CheckService extends Service implements SensorEventListener, Batter
                 mAlarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), sender);
             }
         }
+    }
+
+    // 대체 만보기 프리시져
+    @Override
+    public void hearShake() {
+        mStepDetector = application.get_Mambogi() + 1;
+        Log.e("대체 스텝 디텍터", "" + mStepDetector);
+        application.set_Mambogi(mStepDetector);
     }
 }
