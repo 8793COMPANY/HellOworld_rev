@@ -83,6 +83,7 @@ public class CheckService extends Service implements SensorEventListener, Batter
         initializeNotification();
         init();
 
+
         //  register_Manbogi();
 
        // return START_REDELIVER_INTENT;

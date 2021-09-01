@@ -87,6 +87,7 @@ public class Alert_perm extends AppCompatActivity {
                 ContextCompat.checkSelfPermission(this, RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED
                 ||   ContextCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(this,WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+
         ){
 
 

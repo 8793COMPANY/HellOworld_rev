@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.corporation.helloworld"
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 29
         versionCode 9
         versionName "1.2"
 

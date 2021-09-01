@@ -33,6 +33,7 @@ public class Admin_code extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_code);
 
+
         Button admin_code_back = findViewById(R.id.admin_code_back);
         Button admin_code_send = findViewById(R.id.admin_code_send);
         EditText editText = findViewById(R.id.admin_code_input);

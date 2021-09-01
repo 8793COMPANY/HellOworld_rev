@@ -381,6 +381,9 @@ public class Application extends android.app.Application {
     }
 
 
+
+
+
     public void set_Mambogi(int count){
         SharedPreferences.Editor editor = pref.edit();
         editor.putInt("mambo",count);
