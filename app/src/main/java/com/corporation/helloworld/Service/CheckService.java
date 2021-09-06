@@ -105,8 +105,7 @@ public class CheckService extends Service implements SensorEventListener, Batter
         screenOnReceiver = new ScreenOnReceiver();
         registerReceiver(screenOnReceiver, scrOnFilter);
 
-        // TODO : 회원 등록 후 이 부분에서 권한 문제로 에러 발생
-        // 주석 처리 하면 정상 작동
+        // targetSdkVersion 29 초과하면 에러 발생합니다 !!
         application.setLogSetting();
 
 

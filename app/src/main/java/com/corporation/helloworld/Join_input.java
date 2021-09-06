@@ -126,7 +126,8 @@ public class Join_input extends AppCompatActivity {
         final View dialogView = inflater.inflate(R.layout.activity_date_picker, null);
         builder.setView(dialogView);
 
-        y = cal.get(cal.YEAR);
+        // YMD 기본값 설정
+        y = 1950;
         m = cal.get(cal.MONTH);
         d = cal.get(cal.DAY_OF_MONTH);
 

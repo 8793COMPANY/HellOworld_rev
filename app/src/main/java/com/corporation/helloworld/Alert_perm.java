@@ -142,8 +142,8 @@ public class Alert_perm extends AppCompatActivity {
             }
             else {
                 //TODO: 미개통 스마트폰 처리
-                //Intent intent = new Intent(getApplicationContext(), Alert_cell.class);
-                Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
+                Intent intent = new Intent(getApplicationContext(), Alert_cell.class);
+                //Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();

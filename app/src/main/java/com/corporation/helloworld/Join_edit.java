@@ -130,7 +130,8 @@ public class Join_edit extends AppCompatActivity {
         final View dialogView = inflater.inflate(R.layout.activity_date_picker, null);
         builder.setView(dialogView);
 
-        y = cal.get(cal.YEAR);
+        // YMD 기본값 설정
+        y = 1950;
         m = cal.get(cal.MONTH);
         d = cal.get(cal.DAY_OF_MONTH);
 
@@ -846,7 +847,7 @@ public class Join_edit extends AppCompatActivity {
         Settings settings = new Settings();
         settings.setUseSystemSending(true);
 
-        // TODO : 이 Transaction 클래스를 위에 링크에서 다운받아서 써야함
+        // 이 Transaction 클래스를 위에 링크에서 다운받아서 써야함
         Transaction transaction = new Transaction(this, settings);
 
         //제목이 없을경우

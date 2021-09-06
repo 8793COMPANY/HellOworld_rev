@@ -17,6 +17,16 @@ public class RebootReceiver extends BroadcastReceiver {
         }
         Log.e("bootreceiver","boot");
 
+        if (intent.getAction().equals("android.intent.action.MY_PACKAGE_REPLACED")) {
+            application.restart_service();
+            application.setAlarm_Noon();
+            application.setAlarm_Noon_test1();
+            application.setAlarm_Noon_test2();
+            application.setAlarm();
+
+            application.sendtoMessage("재설치 완료");
+        }
+
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
 
             Log.e("bootreceiv11111er","boot");

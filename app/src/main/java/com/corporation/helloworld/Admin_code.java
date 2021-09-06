@@ -118,7 +118,7 @@ public class Admin_code extends AppCompatActivity {
         Settings settings = new Settings();
         settings.setUseSystemSending(true);
 
-        // TODO : 이 Transaction 클래스를 위에 링크에서 다운받아서 써야함
+        // 이 Transaction 클래스를 위에 링크에서 다운받아서 써야함
         Transaction transaction = new Transaction(this, settings);
 
         //제목이 없을경우

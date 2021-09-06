@@ -5,7 +5,9 @@ import android.content.IntentFilter;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +29,7 @@ public class Log_data extends AppCompatActivity {
     private FragmentTransaction ft;
     private Fragment recordFragment;
     private TextView current_log;
+    LinearLayout current_log_for_tester;
 
     private Application application;
 
@@ -50,6 +53,7 @@ public class Log_data extends AppCompatActivity {
         setContentView(R.layout.activity_log_data);
 
         Button log_data_close = findViewById(R.id.log_data_close);
+        current_log_for_tester = findViewById(R.id.current_log_for_tester);
 
         application =(Application)getApplication();
         pager = findViewById(R.id.main_viewPager);
@@ -103,6 +107,12 @@ public class Log_data extends AppCompatActivity {
         first_call = (cursor.getString(1)+"/"+cursor.getString(2));
         open_screen = (cursor.getString(3));
         activitycounter = (CheckService.mStepDetector+"");
-     //   current_log.setText("현재 데이터\r\n" + first_call + "/" + open_screen + "/" + calling_phone + "/" + os_version + "/" + app_version + "/" + activitycounter);
+
+        // TODO : 테스터용 현재 로그 노출
+        // 사용하려면 true 로 변경해주세요
+        if (false) {
+            current_log_for_tester.setVisibility(View.VISIBLE);
+            current_log.setText("현재 데이터\r\n" + first_call + "//" + open_screen + "/" + calling_phone + "/" + os_version + "/" + app_version + "/" + activitycounter);
+        }
     }
 }

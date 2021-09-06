@@ -27,7 +27,7 @@ public class ScreenOnReceiver extends BroadcastReceiver {
         {
             application = ((Application) context.getApplicationContext());
         }
-        // TODO : 화면 ON-OFF - 서비스 갱신
+        // 화면 ON-OFF - 서비스 갱신
      //   Log.e("화면 ON-OFF - 서비스 갱신","굿굿!!");
 
         Cursor cursor = application.getInformation_first_1();

@@ -4,8 +4,10 @@
 
     <application
         android:name="com.corporation.helloworld.Share.Application"
-        android:allowBackup="false"
-        android:fullBackupContent="false"
+
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="안녕하세요"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -92,7 +94,10 @@
                 <action android:name="battery_call" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".Receiver.UpdateReceiver">
+        <receiver
+            android:enabled="true"
+            android:exported="true"
+            android:name=".Receiver.UpdateReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
