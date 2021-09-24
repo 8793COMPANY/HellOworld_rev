@@ -313,7 +313,7 @@ public class Application extends android.app.Application {
 
     // CallLog를 반환합니다. (오늘의 전화 횟수를 카운터 합니다)
     public int getCallLog() {
-            int miss_call =0;
+        int miss_call =0;
         int call_Count=0;
         Cursor managedCursor = getContentResolver().query(CallLog.Calls.CONTENT_URI, null,
                 null, null, null);

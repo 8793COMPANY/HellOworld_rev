@@ -54,6 +54,7 @@
             android:layout_weight="98.4" />
 
         <LinearLayout
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="22.5dp"
             android:weightSum="360"
@@ -90,6 +91,7 @@
             android:layout_weight="17.9" />
 
         <LinearLayout
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="22.5dp"
             android:weightSum="360"
@@ -115,6 +117,7 @@
             android:layout_weight="76" />
 
         <LinearLayout
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="44">
@@ -190,6 +193,7 @@
             android:layout_weight="46.7">
 
             <LinearLayout
+                android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="360"

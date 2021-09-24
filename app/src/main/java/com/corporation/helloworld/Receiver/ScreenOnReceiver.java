@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.util.Log;
 
+import com.corporation.helloworld.Service.CheckService;
 import com.corporation.helloworld.Share.Application;
 
 import java.text.SimpleDateFormat;
@@ -44,7 +45,11 @@ public class ScreenOnReceiver extends BroadcastReceiver {
             String sql = String.format("update information set firstcall='"+formatDate+"', lastcall='"+formatDate+"',screenopen="+ sum +",screencheck = 0 where _id = 1 ");
             application.dataBase_insert(sql);
         } else {
-            Log.e("핸드폰 열음","ㅎㅎ");
+            String sendData = cursor.getString(1) + "/" + cursor.getString(2) + "/" + cursor.getInt(3) + "/" + application.getCallLog() + "/" + android.os.Build.VERSION.SDK_INT + "/" + "0.90" +
+                    "/" + CheckService.mStepDetector;
+            Log.e("DB 데이터 체크 :: ", sendData);
+            Log.e("통화횟수", application.getCallLog() + "");
+            //Log.e("핸드폰 열음","ㅎㅎ");
             int sum = cursor.getInt(3) ;
             sum +=1;
             Log.e("sum",sum+"");

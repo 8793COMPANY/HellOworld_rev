@@ -29,7 +29,12 @@ public class Log_data extends AppCompatActivity {
     private FragmentTransaction ft;
     private Fragment recordFragment;
     private TextView current_log;
-    LinearLayout current_log_for_tester;
+    LinearLayout current_log_for_tester, layout_for_tester, log_data_title_back_2;
+    Button btn_for_tester;
+
+    // TODO : 테스터용 현재 로그 노출
+    // 사용하려면 true 로 변경해주세요
+    Boolean admin_mode = false;
 
     private Application application;
 
@@ -54,6 +59,9 @@ public class Log_data extends AppCompatActivity {
 
         Button log_data_close = findViewById(R.id.log_data_close);
         current_log_for_tester = findViewById(R.id.current_log_for_tester);
+        log_data_title_back_2 = findViewById(R.id.log_data_title_back_2);
+        layout_for_tester = findViewById(R.id.layout_for_tester);
+        btn_for_tester = findViewById(R.id.btn_for_tester);
 
         application =(Application)getApplication();
         pager = findViewById(R.id.main_viewPager);
@@ -66,8 +74,26 @@ public class Log_data extends AppCompatActivity {
 
         permit_after_Setting();
 
+        if (admin_mode) {
+            layout_for_tester.setVisibility(View.VISIBLE);
+            log_data_title_back_2.setVisibility(View.VISIBLE);
+            current_log_for_tester.setVisibility(View.GONE);
+        }
+
         log_data_close.setOnClickListener(v -> {
             finish();
+        });
+
+        btn_for_tester.setOnClickListener(v -> {
+            admin_mode = !admin_mode;
+
+            if (!admin_mode) {
+                current_log_for_tester.setVisibility(View.VISIBLE);
+                log_data_title_back_2.setVisibility(View.GONE);
+            } else {
+                current_log_for_tester.setVisibility(View.GONE);
+                log_data_title_back_2.setVisibility(View.VISIBLE);
+            }
         });
     }
 
@@ -108,11 +134,14 @@ public class Log_data extends AppCompatActivity {
         open_screen = (cursor.getString(3));
         activitycounter = (CheckService.mStepDetector+"");
 
-        // TODO : 테스터용 현재 로그 노출
-        // 사용하려면 true 로 변경해주세요
-        if (false) {
-            current_log_for_tester.setVisibility(View.VISIBLE);
-            current_log.setText("현재 데이터\r\n" + first_call + "//" + open_screen + "/" + calling_phone + "/" + os_version + "/" + app_version + "/" + activitycounter);
-        }
+        current_log.setText(
+                "[ 현재 데이터 ]\r\n" +
+                        "첫 사용시간 : " + cursor.getString(1) + "\n" +
+                        "마지막 사용시간 : " + cursor.getString(2) + "\n" +
+                        "스마트폰 사용 횟수 : " + open_screen + "\n" +
+                        "통화횟수 : " + calling_phone + "\n" +
+                        "걸음수 : " + activitycounter + "\n" +
+                        "기종명 : " + smart_phone_array + "\n" +
+                        "OS 버젼 : " + os_version);
     }
 }

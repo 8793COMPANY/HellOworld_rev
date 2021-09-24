@@ -38,23 +38,28 @@ public class Admin_code extends AppCompatActivity {
         Button admin_code_send = findViewById(R.id.admin_code_send);
         EditText editText = findViewById(R.id.admin_code_input);
 
+        /*
         Intent number = getIntent();
         String data = number.getStringExtra("msg");
         String first_Msg=number.getStringExtra("first_Msg");
         String second_Msg=number.getStringExtra("second_Msg");
         Log.e("data",data);
+        */
 
         localData = getSharedPreferences("checkCount", Activity.MODE_PRIVATE);
         editor = localData.edit();
 
         admin_code_send.setOnClickListener(v -> {
             editor.putString("admin_code",editText.getText().toString());
+            editor.putBoolean("is_Save", true);
             editor.commit();
+            /*
             sendtoMessage("!"+first_Msg);
             sendtoMessage("@"+second_Msg);
             sendtoMessage("#"+data);
+             */
             sendtoMessage("$"+editText.getText().toString()+"/"+ Build.MODEL);
-     //       sendMMS(data+"/"+editText.getText().toString()+"/"+ Build.MODEL);
+            // sendMMS(data+"/"+editText.getText().toString()+"/"+ Build.MODEL);
             Intent intent = new Intent(getApplicationContext(), Join_logOn.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

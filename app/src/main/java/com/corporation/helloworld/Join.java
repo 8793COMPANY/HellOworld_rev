@@ -22,7 +22,8 @@ public class Join extends AppCompatActivity {
         ImageView join_call_me_2 = findViewById(R.id.join_call_me_2);
 
         join_btn.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), Join_input.class);
+            //Intent intent = new Intent(getApplicationContext(), Join_input.class);
+            Intent intent = new Intent(getApplicationContext(), Admin_code.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
