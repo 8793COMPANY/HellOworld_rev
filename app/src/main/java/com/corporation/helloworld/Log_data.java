@@ -78,6 +78,10 @@ public class Log_data extends AppCompatActivity {
             layout_for_tester.setVisibility(View.VISIBLE);
             log_data_title_back_2.setVisibility(View.VISIBLE);
             current_log_for_tester.setVisibility(View.GONE);
+        } else {
+            log_data_title_back_2.setVisibility(View.VISIBLE);
+            layout_for_tester.setVisibility(View.GONE);
+            current_log_for_tester.setVisibility(View.GONE);
         }
 
         log_data_close.setOnClickListener(v -> {

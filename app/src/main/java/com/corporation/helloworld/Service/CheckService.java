@@ -218,7 +218,7 @@ public class CheckService extends Service implements SensorEventListener, Batter
              */
         } else {
             // 오리지널 만보기 가동
-            sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(this, stepDetectorSensor, SensorManager.SENSOR_DELAY_GAME);
             // 대체 만보기 가동
             /*
             ShakeDetector sd = new ShakeDetector(this);
