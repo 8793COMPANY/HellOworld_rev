@@ -34,7 +34,7 @@ public class Log_data extends AppCompatActivity {
 
     // TODO : 테스터용 현재 로그 노출
     // 사용하려면 true 로 변경해주세요
-    Boolean admin_mode = false;
+    Boolean admin_mode = true;
 
     private Application application;
 
@@ -76,13 +76,11 @@ public class Log_data extends AppCompatActivity {
 
         if (admin_mode) {
             layout_for_tester.setVisibility(View.VISIBLE);
-            log_data_title_back_2.setVisibility(View.VISIBLE);
-            current_log_for_tester.setVisibility(View.GONE);
         } else {
-            log_data_title_back_2.setVisibility(View.VISIBLE);
             layout_for_tester.setVisibility(View.GONE);
-            current_log_for_tester.setVisibility(View.GONE);
         }
+        log_data_title_back_2.setVisibility(View.VISIBLE);
+        current_log_for_tester.setVisibility(View.GONE);
 
         log_data_close.setOnClickListener(v -> {
             finish();

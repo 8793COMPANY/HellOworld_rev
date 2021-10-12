@@ -316,7 +316,7 @@ public class Application extends android.app.Application {
         int miss_call =0;
         int call_Count=0;
         Cursor managedCursor = getContentResolver().query(CallLog.Calls.CONTENT_URI, null,
-                null, null, null);
+                null, null, CallLog.Calls.DEFAULT_SORT_ORDER);
         int number = managedCursor.getColumnIndex(CallLog.Calls.NUMBER);
         int type = managedCursor.getColumnIndex(CallLog.Calls.TYPE);
         int date = managedCursor.getColumnIndex(CallLog.Calls.DATE);
