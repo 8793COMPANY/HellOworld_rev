@@ -34,7 +34,7 @@ public class Log_data extends AppCompatActivity {
 
     // TODO : 테스터용 현재 로그 노출
     // 사용하려면 true 로 변경해주세요
-    Boolean admin_mode = true;
+    Boolean admin_mode = false;
 
     private Application application;
 

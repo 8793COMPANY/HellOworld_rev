@@ -69,11 +69,11 @@ public class Application extends android.app.Application {
 
     public void setLogSetting(){
         final LogConfigurator logConfigurator = new LogConfigurator();
-        logConfigurator.setFileName(Environment.getExternalStorageDirectory()+ "/logfile.log");
+        logConfigurator.setFileName(getApplicationContext().getExternalFilesDir(null).getPath()+ "/logfile.log");
         //   logConfigurator.setFilePattern(pattern);
         logConfigurator.configure();
 
-        exceptionHandler = new ExceptionHandler();
+        exceptionHandler = new ExceptionHandler(getApplicationContext());
         Thread.setDefaultUncaughtExceptionHandler(exceptionHandler);
     }
 

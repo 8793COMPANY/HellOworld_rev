@@ -1,5 +1,6 @@
 package com.corporation.helloworld;
 
+import android.content.Context;
 import android.os.Environment;
 
 import java.io.PrintWriter;
@@ -17,10 +18,10 @@ public class ExceptionHandler implements Thread.UncaughtExceptionHandler{
     private org.apache.log4j.Logger mLogger = org.apache.log4j.Logger.getLogger(ExceptionHandler.class);
     String pattern = "[%d{yyyy-MM-dd HH:mm:ss}] %-5p [%l] - %m%n";
 
-   public ExceptionHandler(){
+   public ExceptionHandler(Context context){
 
        final LogConfigurator logConfigurator = new LogConfigurator();
-       logConfigurator.setFileName(Environment.getExternalStorageDirectory()+ "/logfile.log");
+       logConfigurator.setFileName(context.getExternalFilesDir(null).getPath()+ "/logfile.log");
     //   logConfigurator.setFilePattern(pattern);
        logConfigurator.configure();
 
