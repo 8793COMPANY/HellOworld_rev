@@ -73,19 +73,16 @@ public class Alert_perm extends AppCompatActivity {
     // 권한 요청
     public void requestPermission(){
         ActivityCompat.requestPermissions(this,
-                new String[]{READ_EXTERNAL_STORAGE,READ_CALL_LOG,READ_PHONE_STATE,SEND_SMS,RECEIVE_BOOT_COMPLETED,ACTIVITY_RECOGNITION,RECEIVE_SMS,READ_SMS,RECEIVE_MMS,WRITE_EXTERNAL_STORAGE},
+                new String[]{READ_EXTERNAL_STORAGE,READ_PHONE_STATE,SEND_SMS,RECEIVE_BOOT_COMPLETED,ACTIVITY_RECOGNITION,WRITE_EXTERNAL_STORAGE},
                 PERMISSION_REQUEST_CODE);
     }
 
     // 권한 거절시 체크 코드
     public void checkRequestPermission(){
-        if(ContextCompat.checkSelfPermission(this, READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this, READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED||
+        if(ContextCompat.checkSelfPermission(this, READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(this, SEND_SMS) != PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this, RECEIVE_BOOT_COMPLETED) != PackageManager.PERMISSION_GRANTED
-                ||  ContextCompat.checkSelfPermission(this, ACTIVITY_RECOGNITION) != PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this, RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED
-                ||   ContextCompat.checkSelfPermission(this, READ_SMS) != PackageManager.PERMISSION_GRANTED||
+                ContextCompat.checkSelfPermission(this, RECEIVE_BOOT_COMPLETED) != PackageManager.PERMISSION_GRANTED||
+                ContextCompat.checkSelfPermission(this, ACTIVITY_RECOGNITION) != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(this,WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
 
         ){
@@ -119,6 +116,10 @@ public class Alert_perm extends AppCompatActivity {
     //권한이 승인된 이후에 뷰를 불러오는 메소드
     public void permit_after_Setting()
     {
+        Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
      //   application = (Application) getApplication();
     //    application.setLogSetting();
 
@@ -131,6 +132,8 @@ public class Alert_perm extends AppCompatActivity {
         }else{
             Toast.makeText(this, "서비스 실행중 입니다", Toast.LENGTH_LONG).show();
         }*/
+
+        /*
         TelephonyManager telManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
@@ -141,13 +144,14 @@ public class Alert_perm extends AppCompatActivity {
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
             else {
-                //TODO: 미개통 스마트폰 처리
-                Intent intent = new Intent(getApplicationContext(), Alert_cell.class);
-                //Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
+                //미개통 스마트폰 처리
+                //Intent intent = new Intent(getApplicationContext(), Alert_cell.class);
+                Intent intent = new Intent(getApplicationContext(), Alert_agree_1.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 finish();
             }
         }
+        */
     }
 }

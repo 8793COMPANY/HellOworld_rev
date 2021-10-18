@@ -70,6 +70,7 @@ public class Join_logOn extends AppCompatActivity {
         ImageButton join_logOn_log = findViewById(R.id.join_logOn_log);
         TextView join_logOn_name = findViewById(R.id.join_logOn_name);
         TextView phone_number = findViewById(R.id.phone_number);
+        /*
         TelephonyManager telManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 
         //데이터 가져오기
@@ -82,6 +83,7 @@ public class Join_logOn extends AppCompatActivity {
             } else
                 phone_number.setText("-");
         }
+         */
 
         join_logOn_name.setText(localData.getString("0", ""));
 

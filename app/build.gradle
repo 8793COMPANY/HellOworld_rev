@@ -8,9 +8,9 @@ android {
 
     defaultConfig {
         applicationId "com.corporation.helloworld"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 30
-        versionCode 14
+        versionCode 22
         versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

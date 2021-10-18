@@ -24,7 +24,7 @@ public class Test_Alarm extends BroadcastReceiver {
         if (!cursor.getString(1).equals("배터리 5% 이하입니다.")) {
             cursor = application.getInformation_first_1();
             cursor.moveToFirst();
-            String sendData = cursor.getString(1) + "/" + cursor.getString(2) + "/" + cursor.getInt(3) + "/" + application.getCallLog() + "/" + android.os.Build.VERSION.SDK_INT + "/" + "1.0" +
+            String sendData = cursor.getString(1) + "/" + cursor.getString(2) + "/" + cursor.getInt(3) + "/" + android.os.Build.VERSION.SDK_INT + "/" + "1.0" +
                     "/" + CheckService.mStepDetector;
 
             application.dataBase_insert("INSERT or replace INTO record VALUES("+get_Count_DB(context)+",'" + application.current_Date() + "','" + sendData + "',2);");

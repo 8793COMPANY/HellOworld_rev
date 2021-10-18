@@ -95,7 +95,7 @@ public class ViewFragment extends Fragment {
         }
         smart_phone_array.setText(application.getDeviceName());
         os_version.setText(android.os.Build.VERSION.SDK_INT+"");
-        calling_phone.setText(application.getCallLog()+"");
+        //calling_phone.setText(application.getCallLog()+"");
         cursor=application.getInformation_first_1();
         cursor.moveToFirst();
         first_call.setText(cursor.getString(1)+"/"+cursor.getString(2));

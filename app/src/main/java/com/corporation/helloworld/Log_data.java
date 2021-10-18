@@ -129,7 +129,7 @@ public class Log_data extends AppCompatActivity {
         app_version = ("1.0");
         smart_phone_array = (application.getDeviceName());
         os_version = (android.os.Build.VERSION.SDK_INT+"");
-        calling_phone = (application.getCallLog()+"");
+        //calling_phone = (application.getCallLog()+"");
         cursor=application.getInformation_first_1();
         cursor.moveToFirst();
         first_call = (cursor.getString(1)+"/"+cursor.getString(2));
@@ -141,7 +141,6 @@ public class Log_data extends AppCompatActivity {
                         "첫 사용시간 : " + cursor.getString(1) + "\n" +
                         "마지막 사용시간 : " + cursor.getString(2) + "\n" +
                         "스마트폰 사용 횟수 : " + open_screen + "\n" +
-                        "통화횟수 : " + calling_phone + "\n" +
                         "걸음수 : " + activitycounter + "\n" +
                         "기종명 : " + smart_phone_array + "\n" +
                         "OS 버젼 : " + os_version);

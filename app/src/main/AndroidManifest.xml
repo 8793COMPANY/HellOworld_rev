@@ -111,7 +111,7 @@
                 <action android:name="hello_service_mambo" />
             </intent-filter>
         </service>
-        <service android:name="com.android.mms.transaction.TransactionService" />
+        <!-- <service android:name="com.android.mms.transaction.TransactionService" /> -->
     </application>
 
     <!-- * 안녕하세요 권한-리스트 * -->
@@ -124,22 +124,26 @@
 
     <!-- 핸드폰 상태 추적 및 제어 권한 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACTION_LOCKED_BOOT_COMPLETED " />
+    <!--
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    -->
 
     <!-- SMS, MMS 제어 -->
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.SEND_MMS" />
-    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <!--
     <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
+    <uses-permission android:name="android.permission.SEND_MMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    -->
 
     <!-- 네트워크 상태 파악 및 제어 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -149,8 +153,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!-- 위치 추적 -->
+    <!--
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    -->
 
 </manifest>
