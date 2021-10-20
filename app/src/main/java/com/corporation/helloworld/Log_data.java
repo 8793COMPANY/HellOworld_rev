@@ -34,7 +34,7 @@ public class Log_data extends AppCompatActivity {
 
     // TODO : 테스터용 현재 로그 노출
     // 사용하려면 true 로 변경해주세요
-    Boolean admin_mode = false;
+    Boolean admin_mode = true;
 
     private Application application;
 
@@ -137,12 +137,11 @@ public class Log_data extends AppCompatActivity {
         activitycounter = (CheckService.mStepDetector+"");
 
         current_log.setText(
-                "[ 현재 데이터 ]\r\n" +
-                        "첫 사용시간 : " + cursor.getString(1) + "\n" +
-                        "마지막 사용시간 : " + cursor.getString(2) + "\n" +
-                        "스마트폰 사용 횟수 : " + open_screen + "\n" +
-                        "걸음수 : " + activitycounter + "\n" +
-                        "기종명 : " + smart_phone_array + "\n" +
-                        "OS 버젼 : " + os_version);
+                        "첫 : " + cursor.getString(1) + "\n" +
+                        "마 : " + cursor.getString(2) + "\n" +
+                        "횟 : " + open_screen + "\n" +
+                        "걸 : " + activitycounter + "\n" +
+                        "OS 버젼 : " + os_version + "\n" +
+                        "APP 버젼 : " + BuildConfig.VERSION_CODE);
     }
 }

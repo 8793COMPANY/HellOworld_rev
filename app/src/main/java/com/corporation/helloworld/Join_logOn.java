@@ -21,6 +21,7 @@ import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +71,12 @@ public class Join_logOn extends AppCompatActivity {
         ImageButton join_logOn_log = findViewById(R.id.join_logOn_log);
         TextView join_logOn_name = findViewById(R.id.join_logOn_name);
         TextView phone_number = findViewById(R.id.phone_number);
+
+        TextView vc_tv = findViewById(R.id.vc_tv);
+        ImageView join_logOn_log_2 = findViewById(R.id.join_logOn_log_2);
+        join_logOn_log.setEnabled(false);
+
+        vc_tv.setText("" + BuildConfig.VERSION_CODE);
         /*
         TelephonyManager telManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 
@@ -108,6 +115,12 @@ public class Join_logOn extends AppCompatActivity {
         });
 
         join_logOn_log.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), Log_data.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        });
+
+        join_logOn_log_2.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Log_data.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
